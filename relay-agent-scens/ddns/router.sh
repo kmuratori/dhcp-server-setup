@@ -14,14 +14,14 @@ fi
 hostnamectl set-hostname router
 
 nmcli c m "$IFACE_LAN" \
-  ipv4.addresses "192.168.1.10/24" \
+  ipv4.addresses "192.168.2.10/24" \
   ipv4.method manual \
   ipv4.dns "192.168.1.1" \
   ipv4.dns-search "est.intra" \
   connection.id enp0s3
 
 nmcli c m "$IFACE_DMZ" \
-  ipv4.addresses "192.168.2.10/24" \
+  ipv4.addresses "192.168.1.10/24" \
   ipv4.method manual \
   ipv4.dns "192.168.1.1" \
   ipv4.dns-search "est.intra" \
